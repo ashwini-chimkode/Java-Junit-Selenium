@@ -30,6 +30,11 @@
             <version>2.1.20</version>
             <scope>test</scope>
         </dependency>
+             <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot</artifactId>
+    <version>2.2.9.RELEASE</version>
+</dependency>
        </dependencies>
     <build>
         <plugins>
@@ -52,6 +57,18 @@
                 </configuration>
                 <version>2.12.4</version>
             </plugin>
+                 <plugin>
+    <groupId>org.owasp</groupId>
+    <artifactId>dependency-check-maven</artifactId>
+    <version>6.1.5</version>
+    <executions>
+        <execution>
+            <goals>
+                <goal>check</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
         </plugins>
     </build>
 </project>
